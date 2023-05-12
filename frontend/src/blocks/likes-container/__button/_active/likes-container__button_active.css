@@ -1,0 +1,8 @@
+.likes-container__button_active {
+  opacity: 1;
+  background: no-repeat url('../../../../images/buttons/heart_active.svg');
+}
+
+.likes-container__button_active:hover {
+  opacity: 1;
+}

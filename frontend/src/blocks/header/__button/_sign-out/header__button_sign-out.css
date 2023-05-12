@@ -1,0 +1,7 @@
+.header__button_sign-out {
+  font-size: 18px;
+  color: #A9A9A9;
+}
+.header__button_sign-out:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.header__auth-container {
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and (max-width: 544px) {
+  .header__auth-container {
+    max-width: unset;
+    height: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+}

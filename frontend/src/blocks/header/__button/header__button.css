@@ -1,0 +1,13 @@
+.header__button {
+  justify-self: end;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 544px) {
+  .header__button {
+    font-size: 14px;
+  }
+}

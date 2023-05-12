@@ -1,0 +1,16 @@
+.header__burger-btn {
+  display: none;
+  min-width: 24px;
+  min-height: 21px;
+  background-color: black;
+  border: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 544px) {
+  .header__burger-btn {
+    display: block;
+  }
+}

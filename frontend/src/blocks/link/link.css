@@ -1,0 +1,11 @@
+.link {
+  margin-left: 3px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: ease-out .2s;
+}
+
+.link:hover {
+  transition: ease-in .1s;
+  opacity: .6;
+}

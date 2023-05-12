@@ -1,0 +1,25 @@
+{
+  "short_name": "mesto",
+  "name": "Mesto: Create React App",
+  "icons": [
+    {
+      "src": "favicon.png",
+
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png"
+
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png"
+
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

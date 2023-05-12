@@ -1,0 +1,16 @@
+.sign-page__input-field {
+  margin: 0;
+  padding: 2px 0 8px;
+  width: 100%;
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid #cccccc;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #CCCCCC;
+  outline:none;
+  -webkit-appearance: none;
+}

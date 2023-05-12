@@ -1,0 +1,13 @@
+.sign-page__inputs-container {
+  margin-bottom: 216px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: black;
+}
+
+@media screen and (max-width: 544px) {
+  .sign-page__inputs-container {
+    margin-bottom: 171px;
+  }
+}

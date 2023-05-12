@@ -1,0 +1,18 @@
+.sign-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 880px;
+  padding-left: 19px;
+  padding-right: 19px;
+  height: 100%;
+  max-height: 521px;
+  text-align: center;
+  width: 358px;
+}
+
+@media screen and (max-width: 544px) {
+  .sign-page {
+    width: 260px;
+  }
+}

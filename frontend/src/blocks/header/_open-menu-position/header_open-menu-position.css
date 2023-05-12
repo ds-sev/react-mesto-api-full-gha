@@ -1,0 +1,6 @@
+@media screen and (max-width: 544px) {
+  .header_open-menu-position {
+    transition: margin-top .3s;
+    margin-top: 142px;
+  }
+}

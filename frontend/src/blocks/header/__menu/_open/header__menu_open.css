@@ -1,0 +1,5 @@
+@media screen and (max-width: 544px) {
+  .header__menu_open {
+    transform: translateY(100%);
+  }
+}
