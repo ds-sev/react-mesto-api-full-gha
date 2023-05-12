@@ -1,4 +1,5 @@
 const allowedCors = [
+  'https://mesto.litvinenko-d.nomoredomains.monster/',
   'http://mesto.litvinenko-d.nomoredomains.monster/',
   'localhost:3000',
 ]
