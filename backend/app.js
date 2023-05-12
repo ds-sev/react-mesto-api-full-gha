@@ -22,8 +22,8 @@ app.use(cookieParser())
 
 app.use(cors({
   origin: [
-    'http://mesto.litvinenko-d.nomoredomains.monster/',
-    'https://mesto.litvinenko-d.nomoredomains.monster/',
+    'http://mesto.litvinenko-d.nomoredomains.monster',
+    'https://mesto.litvinenko-d.nomoredomains.monster',
     'localhost:3000'
   ],
   optionsSuccessStatus: 200,
