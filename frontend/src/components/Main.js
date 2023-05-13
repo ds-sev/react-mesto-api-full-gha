@@ -60,7 +60,7 @@ function Main({
         </section>
         <section className="cards wrapper" aria-label="Cards">
           {
-            cards
+            Array.isArray(cards)
               ? cards.map((card) => (
                 <Card
                   title={card.name}
