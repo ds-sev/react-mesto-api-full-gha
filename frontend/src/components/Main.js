@@ -59,19 +59,20 @@ function Main({
           ></button>
         </section>
         <section className="cards wrapper" aria-label="Cards">
-          {cards.map((card) => (
-            <Card
-              title={card.name}
-              likes={card.likes}
-              link={card.link}
-              key={card._id}
-              id={card._id}
-              owner={card.owner}
-              onCardClick={onCardClick}
-              onCardLike={onCardLike}
-              onCardDeteteConfirm={onCardDeleteConfirm}
-            />
-          ))}
+          <p>WTF??</p>
+          {/*{cards.map((card) => (*/}
+          {/*  <Card*/}
+          {/*    title={card.name}*/}
+          {/*    likes={card.likes}*/}
+          {/*    link={card.link}*/}
+          {/*    key={card._id}*/}
+          {/*    id={card._id}*/}
+          {/*    owner={card.owner}*/}
+          {/*    onCardClick={onCardClick}*/}
+          {/*    onCardLike={onCardLike}*/}
+          {/*    onCardDeteteConfirm={onCardDeleteConfirm}*/}
+          {/*  />*/}
+          {/*))}*/}
         </section>
       </main>
     </>
