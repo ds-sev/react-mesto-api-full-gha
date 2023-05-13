@@ -81,7 +81,7 @@ module.exports.login = (req, res, next) => {
         httpOnly: true,
         maxAge: 3600000 * 24 * 7,
       })
-      res.send({ token })
+      res.send(req.cookies)
     })
     .catch(next)
 }
