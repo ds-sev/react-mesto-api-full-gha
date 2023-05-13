@@ -14,13 +14,14 @@ const app = express();
 const port = process.env.PORT || 3000
 
 app.use(cors({
-  origin: [
-    'https://mesto.litvinenko-d.nomoredomains.monster',
-    'http://mesto.litvinenko-d.nomoredomains.monster',
-    'https://mesto.litvinenko-d.nomoredomains.monster/#',
-    'http://localhost',
-    'http://localhost:3000',
-  ],
+  origin: '*',
+  // origin: [
+  //   'https://mesto.litvinenko-d.nomoredomains.monster',
+  //   'http://mesto.litvinenko-d.nomoredomains.monster',
+  //   'https://mesto.litvinenko-d.nomoredomains.monster/#',
+  //   'http://localhost',
+  //   'http://localhost:3000',
+  // ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   credentials: true,
   preflightContinue: false,
