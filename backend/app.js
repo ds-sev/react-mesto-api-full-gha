@@ -18,9 +18,7 @@ app.use(cors({
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
   optionsSuccessStatus: 204,
-  allowedHeaders: ['Content-Type', 'origin', 'Authorization'],
-  exposedHeaders: ['set-cookie'],
-  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }))
 
 mongoose.connect(process.env.DB_CONN, {
