@@ -31,6 +31,11 @@ class Auth {
         password: userData.password,
       }),
     }).then(this._checkResponse)
+      .then((data) => {
+        if (data.token) {
+          return data
+        }
+      })
   }
 
   checkToken(token) {
@@ -49,6 +54,7 @@ const auth = new Auth({
   // baseUrl: 'https://auth.nomoreparties.co',
   baseUrl: 'https://api.mesto.litvinenko-d.nomoredomains.monster',
   headers: {
+    'Accept': 'application/json',
     'Content-Type': 'application/json',
   },
 })
