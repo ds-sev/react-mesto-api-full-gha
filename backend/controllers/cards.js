@@ -13,7 +13,7 @@ module.exports.createCard = (req, res, next) => {
   const id = req.user._id
   const { name, link } = req.body
   Card.create({ name, link, owner: id })
-    .then((card) => res.status(created).send({ data: card }))
+    .then((card) => res.status(created).send(card))
     .catch(next)
 }
 // DELETE CARD BY ID
@@ -42,7 +42,7 @@ function cardReaction(req, res, reaction, next) {
   )
     .orFail()
     .populate(['owner', 'likes'])
-    .then((card) => res.send({ data: card }))
+    .then((card) => res.send(card))
     .catch(next)
 }
 // like card ctrl
