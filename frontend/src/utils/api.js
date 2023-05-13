@@ -99,6 +99,7 @@ const api = new Api({
   baseUrl: 'https://api.mesto.litvinenko-d.nomoredomains.monster',
   headers: {
     // authorization: 'c4ab66aa-531d-4641-bb6a-e0dfe4dabae8',
+    'Accept': 'application/json',
     'Content-Type': 'application/json',
   }
 })
