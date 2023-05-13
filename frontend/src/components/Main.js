@@ -61,7 +61,7 @@ function Main({
         <section className="cards wrapper" aria-label="Cards">
           {
             Array.isArray(cards)
-              ? cards.reverse((card) => (
+              ? cards.reverse.map((card) => (
                 <Card
                   title={card.name}
                   likes={card.likes}
