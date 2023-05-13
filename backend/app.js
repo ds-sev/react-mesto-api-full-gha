@@ -19,6 +19,7 @@ app.use(cors({
   preflightContinue: false,
   optionsSuccessStatus: 204,
   allowedHeaders: ['Content-Type', 'origin', 'Authorization'],
+  exposedHeaders: ['set-cookie'],
   credentials: true,
 }))
 
