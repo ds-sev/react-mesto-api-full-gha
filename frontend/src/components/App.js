@@ -64,7 +64,7 @@ function App() {
       auth.checkToken(token).then((res) => {
         if (res) {
           setLoggedIn(true)
-          navigate('/mesto', { replace: true })
+          navigate('/', { replace: true })
           setEmail(res.data.email)
         }
       })
@@ -210,10 +210,6 @@ function App() {
       <div className="body">
         <div className="page">
           <Routes>
-            <Route path="/"
-                   element={loggedIn
-                     ? <Navigate to="/mesto" replace />
-                     : <Navigate to="/signup" replace />} />
             <Route path="/signup"
                    element={<Register
                      onRegister={handleRegister}
@@ -224,7 +220,7 @@ function App() {
                      title="Вход"
                      onLogin={handleLogin}
                      btnText="Войти" />} />
-            <Route path="/mesto" element={<ProtectedRouteElement
+            <Route path="/" element={<ProtectedRouteElement
               element={Main}
               onEditAvatar={handleEditAvatarClick}
               onAddPlace={handleAddPlaceClick}
@@ -240,6 +236,7 @@ function App() {
               isBurgerOpen={isBurgerOpen}
             />}
             />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
           <div className="push"></div>
           <Footer />
