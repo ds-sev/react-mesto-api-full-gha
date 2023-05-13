@@ -5,7 +5,8 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const { errors } = require('celebrate')
 const routes = require('./routes/index')
-const cors = require('./middlewares/cors')
+// const cors = require('./middlewares/cors')
+const cors = require('cors')
 const centralErrorHandler = require('./middlewares/centralErrorHandler')
 const { requestLogger, errorLogger } = require('./middlewares/logger')
 
@@ -20,7 +21,16 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
-app.use(cors)
+app.use(cors({
+  origin: [
+    '*',
+  ],
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+  allowedHeaders: ['Content-Type', 'origin', 'Authorization'],
+  credentials: true,
+}))
 
 app.use(requestLogger)
 
