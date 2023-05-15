@@ -78,7 +78,7 @@ module.exports.login = (req, res, next) => {
         { expiresIn: '7d' },
       )
       res.cookie('jwt', token, {
-        httpOnly: false,
+        httpOnly: true,
         maxAge: 3600000 * 24 * 7,
       })
       res.send({ token })
