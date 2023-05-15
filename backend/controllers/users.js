@@ -86,6 +86,6 @@ module.exports.login = (req, res, next) => {
     .catch(next)
 }
 
-module.exports.logout = (req, res) => {
+module.exports.logout = (res) => {
   res.clearCookie('jwt').send({ message: 'Вы вышли из системы' });
-};
+}
