@@ -2,6 +2,8 @@ const allowedCors = [
   'https://mesto.litvinenko-d.nomoredomains.monster',
   'http://mesto.litvinenko-d.nomoredomains.monster',
   'localhost:3000',
+  'http://localhost:3000',
+  'http://localhost:3001',
 ]
 
 const DEFAULT_ALLOWED_METHODS = 'GET, HEAD, PUT, PATCH, POST, DELETE'
