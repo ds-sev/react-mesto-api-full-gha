@@ -40,6 +40,14 @@ class Auth {
       })
   }
 
+  logout() {
+    return fetch(`${this._baseUrl}/sign-out`, {
+      method: 'GET',
+      headers: this._headers,
+      credentials: 'include',
+    }).then(this._checkResponse)
+  }
+
   checkToken(token) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'GET',

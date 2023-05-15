@@ -193,7 +193,10 @@ function App() {
 
   function handleSignOut() {
     setSignOutBtnText('Выходим...')
-    localStorage.removeItem('token')
+    auth
+      .logout()
+      .then()
+    // localStorage.removeItem('token')
     navigate('/signin', { replace: true })
     setIsBurgerOpen(false)
     closeAllPopups()
