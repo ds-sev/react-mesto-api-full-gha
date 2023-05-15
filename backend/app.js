@@ -21,6 +21,8 @@ app.use(cors({
     'http://mesto.litvinenko-d.nomoredomains.monster',
     'http://localhost',
     'http://localhost:3000',
+    'http://192.168.1.33:3000/signin',
+    'http://192.168.1.33:3000',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   credentials: true,
