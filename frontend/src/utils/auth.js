@@ -54,7 +54,6 @@ class Auth {
 }
 
 const auth = new Auth({
-  // baseUrl: 'https://auth.nomoreparties.co',
   baseUrl: 'https://api.mesto.litvinenko-d.nomoredomains.monster',
   headers: {
     'Accept': 'application/json',

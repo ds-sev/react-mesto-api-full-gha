@@ -16,12 +16,9 @@ const port = process.env.PORT || 3000
 app.use(cors({
   origin: [
     'https://mesto.litvinenko-d.nomoredomains.monster',
-    'https://mesto.litvinenko-d.nomoredomains.monster/users/me',
-    'https://mesto.litvinenko-d.nomoredomains.monster/cards',
     'http://mesto.litvinenko-d.nomoredomains.monster',
-    'http://localhost',
     'http://localhost:3000',
-    'http://192.168.1.33:3000/signin',
+    'http://localhost:3001',
     'http://192.168.1.33:3000',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],

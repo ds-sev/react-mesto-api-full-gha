@@ -32,7 +32,7 @@ function App() {
   //elements states
   const [currentUser, setCurrentUser] = useState({})
   const [selectedCard, setSelectedCard] = useState({ name: '', link: '' })
-  const [cards, setCards] = useState([])
+  const [cards, setCards] = useState({})
   const [cardToDelete, setCardToDelete] = useState({})
   const [deleteCardConfirmationBtnText, setDeleteCardConfirmationBtnText] = useState('Да')
   const [editProfileBtnText, setEditProfileBtnText] = useState('Сохранить')
@@ -51,7 +51,7 @@ function App() {
       Promise.all([api.getUserInfo(), api.getInitialCards()])
         .then(([userData, cardsData]) => {
           setCurrentUser(userData)
-          setCards(cardsData)
+          setCards(cardsData.reverse())
         })
         .catch((err) => console.log(err))
     }
@@ -65,7 +65,7 @@ function App() {
         if (res) {
           setLoggedIn(true)
           navigate('/', { replace: true })
-          setEmail(res.data.email)
+          setEmail(res.email)
         }
       })
         .catch((err) => console.log(err))
@@ -150,6 +150,7 @@ function App() {
     setAddPlaceBtnText('Добавляем...')
     api
       .postNewCard(newCardData)
+
       .then((res) => {
         setCards([res, ...cards])
         closeAllPopups()
