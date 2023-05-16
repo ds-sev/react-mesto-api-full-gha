@@ -6,7 +6,7 @@ const NotFound = require('../utils/customErrors/notFound')
 
 router.post('/signin', userSignInValidate, login)
 router.post('/signup', userSignUpValidate, createUser)
-router.get('/sign-out', logout)
+router.post('/sign-out', logout)
 router.use('/users', auth, require('./users'))
 router.use('/cards', auth, require('./cards'))
 

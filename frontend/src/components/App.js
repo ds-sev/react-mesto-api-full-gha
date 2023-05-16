@@ -196,7 +196,7 @@ function App() {
     auth
       .logout()
       .then()
-    // localStorage.removeItem('token')
+    localStorage.removeItem('token')
     navigate('/signin', { replace: true })
     setIsBurgerOpen(false)
     closeAllPopups()

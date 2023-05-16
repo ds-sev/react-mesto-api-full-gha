@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
 const { created } = require('../utils/requestStatusCodes')
+const { send } = require('express/lib/response')
 
 // GET USER INFO
 function getUser(res, id, next) {
@@ -86,6 +87,6 @@ module.exports.login = (req, res, next) => {
     .catch(next)
 }
 
-module.exports.logout = (res) => {
-  res.clearCookie('jwt').send({ message: 'Вы вышли из системы' });
+module.exports.logout = (req, res) => {
+  res.clearCookie('jwt').send({ message: 'Успешный выход' })
 }
