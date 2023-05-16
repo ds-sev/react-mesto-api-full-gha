@@ -195,11 +195,18 @@ function App() {
     setSignOutBtnText('Выходим...')
     auth
       .logout()
-      .then()
-    localStorage.removeItem('token')
-    navigate('/signin', { replace: true })
-    setIsBurgerOpen(false)
-    closeAllPopups()
+      .then(() => {
+        setLoggedIn(false)
+        localStorage.removeItem('token')
+        navigate('/signin', { replace: true })
+        setIsBurgerOpen(false)
+        closeAllPopups()
+      })
+      .catch((err) => {
+        setInfoTooltipState({isOpen: true, text: 'Что-то пошло не так! Попробуйте ещё раз.', image: FailIcon })
+        setTimeout(() => closeAllPopups(), 3000)
+        console.log(err)
+      })
   }
 
   const handleSignOutConfirmation = () => {
