@@ -6,7 +6,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.38.111
+IP 158.160.38.111
 
 Frontend <https://mesto.litvinenko-d.nomoredomains.monster/>
 
