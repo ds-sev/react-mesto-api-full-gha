@@ -2,7 +2,6 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
 const { created } = require('../utils/requestStatusCodes')
-const { send } = require('express/lib/response')
 
 // GET USER INFO
 function getUser(res, id, next) {
